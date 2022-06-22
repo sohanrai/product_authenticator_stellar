@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/Screens/scan_qr.dart';
 import 'package:untitled1/Screens/second_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -100,6 +101,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     MaterialPageRoute(builder: (context) => second_screen()),
                   );
                 }
+              },
+            ),
+          ),
+          SizedBox(
+            height: 100.0,
+          ),
+          Container(
+            height: 50,
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: ElevatedButton(
+              child: const Text('QR Scanner'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => QRScanScreen()),
+                );
               },
             ),
           ),

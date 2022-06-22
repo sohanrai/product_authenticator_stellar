@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/Screens/add_product.dart';
 
+import 'all_products.dart';
+
 class second_screen extends StatefulWidget {
   const second_screen({Key? key}) : super(key: key);
 
@@ -30,7 +32,7 @@ class _second_screenState extends State<second_screen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => add_product()),
+                  MaterialPageRoute(builder: (context) => AddProductsScreen()),
                 );
               },
             ),
@@ -54,7 +56,12 @@ class _second_screenState extends State<second_screen> {
                 color: Colors.white,
                 child: Image.asset("images/listi.png"),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AllProductsScreen()));
+              },
             ),
             const SizedBox(
               height: 10.0,
