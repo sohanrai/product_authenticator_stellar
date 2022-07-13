@@ -14,7 +14,7 @@ Future<List<Widget>> getProducts(context) async {
     "SAEIHXPDK4LAZXIC6YZIGDTCNJQZHFJ5FMTYSXG6OUVBYLEB3LV5HMP5",
   );
 
-  //GA7GMOVYB6QLXHKXVVTSZR3XOHM3KBCPLDV5YKSZAP4P56IYOAK6DPSO - Public Key
+  // GA7GMOVYB6QLXHKXVVTSZR3XOHM3KBCPLDV5YKSZAP4P56IYOAK6DPSO - Public Key
   // print("response");
 
   String accountId = "GA7GMOVYB6QLXHKXVVTSZR3XOHM3KBCPLDV5YKSZAP4P56IYOAK6DPSO";
@@ -53,7 +53,7 @@ Future<List<Widget>> getProducts(context) async {
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => QR_Generated_Screen(
-                      publicKey: itemKey,
+                      publicKey: por.account.toString(),
                     )));
           },
           child: Card(

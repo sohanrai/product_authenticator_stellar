@@ -13,8 +13,9 @@ class _AllProductsScreenState extends State<AllProductsScreen> {
   List<Widget> cards = [];
   getProductsCards() async {
     cards = await getProducts(context);
+    setState(() {
 
-    setState(() {});
+    });
   }
 
   @override
