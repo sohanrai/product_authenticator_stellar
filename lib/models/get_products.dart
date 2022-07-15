@@ -24,6 +24,7 @@ Future<List<Widget>> getProducts(context) async {
 
   stellar.Page<stellar.OperationResponse> payments = await sdk.payments
       .forAccount(accountId)
+      .limit(50)
       .order(stellar.RequestBuilderOrder.DESC)
       .execute();
 
